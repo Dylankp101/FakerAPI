@@ -21,8 +21,7 @@ class User {
 console.log(new User());
 
 
-const user1 = new User();
-const comp1 = new Company();
+
 
 app.get("/api/company", (req, res) => {
 res.json(new Company());
@@ -35,10 +34,11 @@ app.get("/api/user", (req, res) => {
   res.json( new User() );
 });
 
-
+const user1 = new User();
+const comp1 = new Company();
 
 app.get("/api/companyuser", (req, res) => {
-  res.json( user1 + comp1 );
+  res.json( [user1 , comp1] );
 
 
 });
